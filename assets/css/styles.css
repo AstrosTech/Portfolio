@@ -1,0 +1,183 @@
+@font-face {
+    font-family: "Righteous";
+    src: url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+}
+
+* {
+    font-family: "Righteous";
+}
+
+/*  Default 320x */
+html body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    transition: scroll 1s;
+}
+
+a {
+    color: inherit;
+}
+
+header {
+    display: flex;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.926);
+    height: calc(100vh + 53px);
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+header h1 {
+    margin: 1rem 0;
+}
+
+header h1 span {
+    text-decoration: underline;
+    color: #779BE7;
+}
+
+#profile-button {
+    font-weight: normal;
+    font-size: smaller;
+    border-style: solid;
+    float: left;
+    margin-top: 1rem;
+    padding: .5rem;
+    margin-bottom: 53px;
+}
+
+#arrow {
+    display: inline-block;
+    transition: all .3s;
+}
+#arrow::before {
+    content: "➜";
+    padding: .3rem;
+    color: white;
+}
+#profile-button:hover {
+    background-color: #4072DD;
+}
+#profile-button:hover #arrow {
+    transform: rotate(90deg);
+}
+
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5%;
+}
+
+.card {
+    display: inline;
+    justify-content: center;
+    background-color: white;
+    flex: 1 0 100%;
+    border-style: solid;
+    text-align: center;
+    font-size: xx-large;
+    padding: 5rem 0;
+    margin: 3rem 0;
+
+    transition: transform .2s;
+}
+
+
+.project-name {
+    font-size: 3rem;
+}
+
+.project-description {
+    display: inherit;
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-style: solid;
+    margin: 5%;
+}
+
+.about-me-img {
+    border-radius: 50%;
+    width: 75%;
+    margin: 2% 100%
+}
+
+.about-me-description {
+    text-align: center;
+    margin: 2%;
+}
+
+nav {
+    background-color: #779BE7;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: block;
+    margin: 0;
+    padding: 2rem;
+}
+
+nav ul li {
+    margin: .5rem 0;
+    text-align: center;
+    border-style: solid;
+    list-style-type: none;
+    padding-top: 0;
+    font-size: xx-large;
+    color: black;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.socials {
+    text-align: center;
+    font-size: 4rem;
+}
+.socials ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.socials ul li {
+    padding: 2rem;
+    display: inline-flex;
+}
+
+#copied {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    padding: 1rem;
+    width: 6rem;
+    background-color: #779BE7;
+    border-style: solid;
+    text-align: center;
+    transition: opacity ease-in-out 1s;
+    opacity: 0;
+}

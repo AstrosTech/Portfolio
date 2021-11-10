@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastian Lample</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" type="text/css">
+
+    <script src="https://kit.fontawesome.com/07f22fec0f.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let scrolling = false;
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+                if (scrolling) return;
+                scrolling = true;
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    
+                                        
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    
+                    if(!$(hash).offset()) return;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        scrolling = false;
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+        <header>
+            <section class="profile">
+                <h1>Hello, I'm <span>Sebastian Lample.</span></h1>
+                <h1>Learning Full Stack Web Development</h1>
+
+                <div id="profile-button"><a href="#projects">View My Work <div id="arrow"></div></a></div>
+            </section>
+        </header>
+
+        <body>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#socials">socials</a></li>
+                </ul>
+            </nav>
+            <section id="projects">
+                <div class="card">
+                        <h1 class="project-name">Discord Bot</h1>
+                        <div class="project-description">
+                            Community Discord Bot meant for large Discords.
+                        </div>
+                </div>
+
+                <div class="card">
+                    <h1 class="project-name">Portfolio Website</h1>
+                    <div class="project-description">
+                        Fully Responsive Portfolio Website
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h1 class="project-name">Filler</h1>
+                    <div class="project-description">
+                        Lorem ipsum dolor sit amet consectetur
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <img class="about-me-img" src="assets/images/pfp.png"></img>
+                <div class="about-me-description">
+                    Lorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consectetur
+                </div>
+            </section>
+
+            <footer>
+                <section class="socials">
+                    <ul>
+                        <li><a href="https://github.com/AstrosTech"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                        <li><a href="#socials"><i class="fas fa-envelope-square" id="email"></i></a></li>
+                    </ul>
+                </section>
+            </footer>
+
+            <div id="copied"> Email Copied </div>
+            <script src="./assets/Javascript.js"></script>
+        </body>
+</body>
+</html>
