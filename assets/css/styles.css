@@ -14,6 +14,10 @@ html body {
     scroll-behavior: smooth;
     transition: scroll 1s;
 }
+
+body {
+    background-color: #222831;
+}
 a {
     color: inherit;
     margin: 0;
@@ -23,7 +27,7 @@ a {
 header {
     display: flex;
     color: white;
-    background-color: rgba(0, 0, 0, 0.926);
+    background-color: #222831;
     height: calc(100vh + 53px);
     justify-content: center;
     align-items: center;
@@ -41,7 +45,7 @@ header h1 {
 
 header h1 span {
     text-decoration: underline;
-    color: #779BE7;
+    color: #8ecccc;
 }
 
 #profile-button {
@@ -80,7 +84,7 @@ header h1 span {
 .card {
     display: inline;
     justify-content: center;
-    background-color: white;
+    background-color: #83aac4;
     flex: 1 0 100%;
     border-style: solid;
     text-align: center;
@@ -114,6 +118,7 @@ header h1 span {
     justify-content: center;
     border-style: solid;
     margin: 5%;
+    background-color: #83aac4;
 }
 
 .about-me-img {
@@ -128,7 +133,7 @@ header h1 span {
 }
 
 nav {
-    background-color: #779BE7;
+    background-color: #8ecccc;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -159,6 +164,7 @@ nav ul li a {
     text-align: center;
     font-size: 4rem;
 }
+
 #socials ul {
     margin: 0;
     padding: 0;
@@ -167,8 +173,14 @@ nav ul li a {
 }
 
 #socials ul li {
-    padding: 2rem;
+    padding: 2rem 5rem;
     display: inline-flex;
+}
+
+#socials ul li:hover {
+    transition: all .7s;
+    transform: scale(1.05);
+    background-color: #83aac4;
 }
 
 #copied {
