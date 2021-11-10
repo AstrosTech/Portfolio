@@ -26,6 +26,7 @@ header {
     height: calc(100vh + 53px);
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 .profile {
@@ -152,18 +153,18 @@ nav ul li a {
     text-align: center;
 }
 
-.socials {
+#socials {
     text-align: center;
     font-size: 4rem;
 }
-.socials ul {
+#socials ul {
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
 }
 
-.socials ul li {
+#socials ul li {
     padding: 2rem;
     display: inline-flex;
 }
@@ -180,4 +181,48 @@ nav ul li a {
     text-align: center;
     transition: opacity ease-in-out 1s;
     opacity: 0;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (min-width: 576px) {
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+    }
+    nav ul li {
+        display: inline;
+        padding: 0 1rem;
+        margin: 0 1rem;
+        font-size: x-large;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 3rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    #main-project {
+        flex:1 0 70%;
+        margin: 0 5rem;
+    }
+    .card {
+        display: flex;
+        flex: 1 0 20%;
+        flex-wrap: wrap;
+        margin: 3rem 2rem;
+        transition: transform .2s;
+    }
+
+    .project-name {
+        width: 100%;
+    }
 }
