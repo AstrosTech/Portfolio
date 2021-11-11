@@ -30,11 +30,11 @@
                     
                     if(!$(hash).offset()) return;
                     $('html, body').animate({
-                        scrollTop: $(hash).offset().top - 200
+                        scrollTop: $(hash).offset().top - 300
                     }, 800, function () {
                         scrolling = false;
                         // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
+                        window.location.hash = hash - 300;
                     });
                 }
             });
@@ -44,23 +44,43 @@
 
 <body>
         <header>
+            <!-- Entire intro -->
             <section class="profile">
+                <!-- Span for colored name -->
                 <h1>Hello, I'm <span>Sebastian Lample.</span></h1>
                 <h1>Learning Full Stack Web Development</h1>
 
+                <!-- Go to projects anchor -->
                 <div id="profile-button"><a href="#projects">View My Work <div id="arrow"></div></a></div>
             </section>
         </header>
 
             <nav>
                 <ul>
-                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#socials">Socials</a></li>
                 </ul>
             </nav>
 
+            <!-- About me section -->
+            <h1 class="intro-category">About Me</h1>
+            <section id="about">
+                <img class="about-me-img" src="assets/images/pfp.png"></img>
+                <div class="about-me-description">
+                    Hello! I'm Sebastian. I am an 18 year old developer learning<br>
+                    Full Stack Web Development at UCLA Extensions.
+                    <br>
+                    <br>
+                    I have experience in:<br> 
+                    Javascript, Java, HTML, CSS, SQL, Redis, and MongoDB
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <h1 class="intro-category">Projects</h1>
             <section id="projects">
+                    <!-- Discord Bot Card -->
                     <div class="card" id="main-project">
                         <a href="https://github.com/AstrosTech/Astro-Tech-Server-Bot" target="_blank" rel="noopener noreferrer">
                             <h1 class="project-name">Discord Bot</h1>
@@ -70,6 +90,7 @@
                         </a>
                     </div>
 
+                    <!-- Portfolio Card -->
                     <div class="card">
                         <a href="https://github.com/AstrosTech/Portfolio" target="_blank" rel="noopener noreferrer">
                             <h1 class="project-name">Portfolio Website</h1>
@@ -79,32 +100,28 @@
                         </a>
                     </div>
 
-                <div class="card">
-                    <h1 class="project-name">Filler</h1>
-                    <div class="project-description">
-                        Lorem ipsum dolor sit amet consectetur
+                    <!-- Filler -->
+                    <div class="card">
+                        <h1 class="project-name">Filler</h1>
+                        <div class="project-description">
+                            Lorem ipsum dolor sit amet consectetur
+                        </div>
                     </div>
-                </div>
             </section>
 
-            <section id="about">
-                <img class="about-me-img" src="assets/images/pfp.png"></img>
-                <div class="about-me-description">
-                    Lorem ipsum dolor sit amet consectetur
-                    Lorem ipsum dolor sit amet consectetur
-                    Lorem ipsum dolor sit amet consectetur
-                </div>
-            </section>
-
+            <!-- Socials Section -->
             <footer>
                 <section id="socials">
                     <ul>
+                        <!-- GitHub -->
                         <a href="https://github.com/AstrosTech" target="_blank" rel="noopener noreferrer"><li><i class="fa fa-github" aria-hidden="true"></i></li></a>
+                        <!-- Email (Click to Copy) -->
                         <a href="#socials"><li><i class="fas fa-envelope-square" id="email"></i></li></a>
                     </ul>
                 </section>
             </footer>
 
+            <!-- Hidden Copied Notification -->
             <div id="copied">Copied to Clipboard</div>
             <script src="./assets/Javascript.js"></script>
         </body>

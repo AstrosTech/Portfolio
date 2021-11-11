@@ -18,12 +18,13 @@ html body {
 body {
     background-color: #222831;
 }
+
 a {
     color: inherit;
     margin: 0;
     padding: 0;
 }
-
+/* Header */
 header {
     display: flex;
     color: white;
@@ -34,11 +35,6 @@ header {
     padding: 1rem;
 }
 
-.profile {
-    font-weight: bold;
-    font-size: xx-large;
-}
-
 header h1 {
     margin: 1rem 0;
 }
@@ -46,6 +42,13 @@ header h1 {
 header h1 span {
     text-decoration: underline;
     color: #8ecccc;
+}
+
+
+/* Intro Profile */
+.profile {
+    font-weight: bold;
+    font-size: xx-large;
 }
 
 #profile-button {
@@ -62,76 +65,22 @@ header h1 span {
     display: inline-block;
     transition: all .3s;
 }
+
 #arrow::before {
     content: "➜";
     padding: .3rem;
     color: white;
 }
+
 #profile-button:hover {
     background-color: #4072DD;
 }
+
 #profile-button:hover #arrow {
     transform: rotate(90deg);
 }
 
-
-#projects {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5%;
-}
-
-.card {
-    display: inline;
-    justify-content: center;
-    background-color: #83aac4;
-    flex: 1 0 100%;
-    border-style: solid;
-    text-align: center;
-    font-size: xx-large;
-    padding: 5rem 0;
-    margin: 5rem 0;
-
-    cursor: pointer;
-    transition: transform .2s;
-}
-
-
-.project-name {
-    font-size: 3rem;
-}
-
-.project-description {
-    display: inherit;
-    font-size: 1.8rem;
-    line-height: 2;
-}
-
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-#about {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border-style: solid;
-    margin: 5%;
-    background-color: #83aac4;
-}
-
-.about-me-img {
-    border-radius: 50%;
-    width: 75%;
-    margin: 2% 100%
-}
-
-.about-me-description {
-    text-align: center;
-    margin: 2%;
-}
-
+/* Navigation */
 nav {
     background-color: #8ecccc;
     position: sticky;
@@ -161,6 +110,70 @@ nav ul li a {
     text-align: center;
 }
 
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+/* Projects */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3%;
+}
+
+.card { 
+    display: inline;
+    justify-content: center;
+    background-color: #83aac4;
+    flex: 1 0 100%;
+    border-style: solid;
+    text-align: center;
+    font-size: xx-large;
+    padding: 5rem 0;
+    margin: 5rem 0;
+
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.project-name {
+    font-size: 3rem;
+}
+
+.project-description {
+    display: inherit;
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* About Me */
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-style: solid;
+    margin: 5%;
+    background-color: #83aac4;
+}
+
+.about-me-img {
+    border-radius: 50%;
+    width: 75%;
+    margin: 2% 100%
+}
+
+.about-me-description {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 2%;
+}
+
+/* Socials */
 #socials {
     text-align: center;
     font-size: 4rem;
@@ -174,8 +187,9 @@ nav ul li a {
 }
 
 #socials ul li {
-    padding: 2rem 5rem;
     display: inline-flex;
+    padding: 0 2rem;
+    justify-content: space-between;
 }
 
 #socials ul li:hover {
@@ -186,11 +200,10 @@ nav ul li a {
 
 #copied {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 8rem;
+    right: 2rem;
     margin: 1rem;
     padding: 1rem;
-    width: 6rem;
     background-color: #779BE7;
     border-style: solid;
     text-align: center;
@@ -198,12 +211,17 @@ nav ul li a {
     opacity: 0;
 }
 
-nav ul li:hover {
-    transform: scale(1.1);
+/* Category Introductions */
+.intro-category {
+    display: inline;
+    margin: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (min-width: 576px) {
-
+    /* Making Nav display in one line */
     nav ul {
         display: flex;
         justify-content: center;
@@ -218,17 +236,19 @@ nav ul li:hover {
 }
 
 @media screen and (min-width: 768px) {
+    /* Adding Some extra padding for larger screens */
     header {
         padding: 3rem;
     }
 }
 
 @media screen and (min-width: 992px) {
-
+    /* Making projects display one then two on desktops */
     #main-project {
-        flex:1 0 70%;
+        flex: 1 0 70%;
         margin: 0 5rem;
     }
+
     .card {
         display: flex;
         flex: 1 0 20%;
