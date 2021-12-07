@@ -3,6 +3,10 @@
     src: url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 }
 
+:root {
+    --Blue: #83aac4;
+}
+
 * {
     font-family: "Righteous";
 }
@@ -16,7 +20,7 @@ html body {
 }
 
 body {
-    background-color: #222831;
+    background-color: black;
 }
 
 a {
@@ -24,11 +28,12 @@ a {
     margin: 0;
     padding: 0;
 }
+
 /* Header */
 header {
     display: flex;
     color: white;
-    background-color: #222831;
+    background-color: black;
     height: calc(100vh + 53px);
     justify-content: center;
     align-items: center;
@@ -41,7 +46,7 @@ header h1 {
 
 header h1 span {
     text-decoration: underline;
-    color: #8ecccc;
+    color: var(--Blue)
 }
 
 
@@ -72,17 +77,13 @@ header h1 span {
     color: white;
 }
 
-#profile-button:hover {
-    background-color: #4072DD;
-}
-
 #profile-button:hover #arrow {
     transform: rotate(90deg);
 }
 
 /* Navigation */
 nav {
-    background-color: #8ecccc;
+    background-color: var(--Blue);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -92,7 +93,6 @@ nav ul {
     display: block;
     margin: 0;
     padding: 2rem;
-    margin: 5rem 0;
 }
 
 nav ul li {
@@ -124,15 +124,17 @@ nav ul li:hover {
 .card { 
     display: inline;
     justify-content: center;
-    background-color: #83aac4;
     flex: 1 0 100%;
-    border-style: solid;
     text-align: center;
     font-size: xx-large;
     padding: 5rem 0;
     margin: 5rem 0;
 
-    cursor: pointer;
+    backdrop-filter: blur(18px) saturate(200%);
+    -webkit-backdrop-filter: blur(18px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.125);
     transition: transform .2s;
 }
 
@@ -156,8 +158,9 @@ nav ul li:hover {
     flex-wrap: wrap;
     justify-content: center;
     border-style: solid;
-    margin: 5%;
-    background-color: #83aac4;
+    margin: 0 5% 5% 5%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
 }
 
 .about-me-img {
@@ -204,7 +207,7 @@ nav ul li:hover {
     right: 2rem;
     margin: 1rem;
     padding: 1rem;
-    background-color: #779BE7;
+    background-color: var(--Gold);
     border-style: solid;
     text-align: center;
     transition: opacity ease-in-out 1s;
