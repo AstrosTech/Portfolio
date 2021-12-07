@@ -34,7 +34,7 @@ header {
     display: flex;
     color: white;
     background-color: black;
-    height: calc(100vh + 53px);
+    height: 80vh;
     justify-content: center;
     align-items: center;
     padding: 1rem;
@@ -83,7 +83,9 @@ header h1 span {
 
 /* Navigation */
 nav {
-    background-color: var(--Blue);
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, .5);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -93,6 +95,7 @@ nav ul {
     display: block;
     margin: 0;
     padding: 2rem;
+    opacity: 1;
 }
 
 nav ul li {
@@ -102,7 +105,8 @@ nav ul li {
     list-style-type: none;
     padding-top: 0;
     font-size: xx-large;
-    color: black;
+    color: var(--Blue);
+    opacity: 1;
 }
 
 nav ul li a {
